@@ -9,7 +9,17 @@ An Event Bus is a powerful and flexible design pattern used in software developm
 **Unregister:** Unregister a static class or virtual class instance from the bus, and its methods will stop receiving events.
 
 ## Usage
-**Setup:** Include the library in your project.\
+**Setup:** Use Gradle to include the Event Bus as part of your dependencies. Alternatively, you can download the source code and add it as a dependency manually.
+```gradle
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.abonasera:event-bus:0.1'
+}
+```
 **Creating the Event Bus:** Start by creating a new instance of the ```EventBus```. You can create as many instances as you'd like, but a singleton instance should do for most projects.
 ```java
 EventBus bus = new EventBus();
